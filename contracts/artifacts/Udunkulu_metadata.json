@@ -1,0 +1,468 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "addr",
+						"type": "string"
+					}
+				],
+				"name": "LogResponse",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "contentName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "contentCreator",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "contentType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "contentSummary",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "coverUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "publicUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sampleUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "remixUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "samples",
+						"type": "string"
+					},
+					{
+						"internalType": "string[]",
+						"name": "coOwners",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationDate",
+						"type": "uint256"
+					}
+				],
+				"name": "addRoyalty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "contentUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phoneNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string[]",
+						"name": "evidenceUrls",
+						"type": "string[]"
+					}
+				],
+				"name": "createDispute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "disputes",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "creatorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "disputeID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "contentUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phoneNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isResolved",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "disputeID",
+						"type": "bytes32"
+					}
+				],
+				"name": "resolveDispute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "returnDisputes",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "creatorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "disputeID",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "string",
+								"name": "contentUrl",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "email",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "phoneNumber",
+								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "evidenceUrls",
+								"type": "string[]"
+							},
+							{
+								"internalType": "bool",
+								"name": "isResolved",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Udunkulu.Disputes[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "returnRoyalties",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "creatorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "royaltyID",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "string",
+								"name": "coverUrl",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "publicUrl",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "sampleUrl",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "remixUrl",
+								"type": "string"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "contentCreator",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "contentName",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "contentType",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "contentSummary",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "samples",
+										"type": "string"
+									}
+								],
+								"internalType": "struct Udunkulu.RoyaltyData",
+								"name": "royaltyData",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "publicationDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string[]",
+								"name": "coOwners",
+								"type": "string[]"
+							},
+							{
+								"internalType": "bool",
+								"name": "isVerified",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Udunkulu.Royalties[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "royalties",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "creatorAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "royaltyID",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "coverUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "publicUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "sampleUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "remixUrl",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "contentCreator",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "contentName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "contentType",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "contentSummary",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "samples",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Udunkulu.RoyaltyData",
+						"name": "royaltyData",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publicationDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isVerified",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "royaltyID",
+						"type": "bytes32"
+					}
+				],
+				"name": "verifyRoyalty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Udunkulu.sol": "Udunkulu"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Udunkulu.sol": {
+			"keccak256": "0x843ec1e3cdd69137a6904d999ca19ff8ab210dc9279e8b2616203b15b22bf589",
+			"license": "Unlicensed",
+			"urls": [
+				"bzz-raw://00490680c378a1f90672a25a0ad2df8c57fd209b016c76cfdabfd68f73a5bf3c",
+				"dweb:/ipfs/Qmc6xf1EpizRZzD9bwM6zX6vGo23VCjt7TkG4gTVqzZ8xb"
+			]
+		}
+	},
+	"version": 1
+}
